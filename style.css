@@ -1,0 +1,26 @@
+ul{
+    list-style-type: none;
+    counter-reset: item;
+}
+li:before{
+    counter-increment: item;
+    content: "Chapter " counters(item, ".") " ";
+    
+}
+ul:nth-child(2){
+    background: #ff0000;
+}
+ul ul:last-child{
+    background: rgb(241, 241, 14);
+}
+ul ul ul:last-child{
+   background: blue;
+}
+li:nth-of-type(n+1){
+   border: 2px solid black;
+   box-shadow: 2px 5px rgb(104, 101, 101);
+}
+
+li:hover{
+   background: green;
+}
